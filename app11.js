@@ -41,4 +41,4 @@ topSongs.push('gravity');
 //topsongs.unshift('What Kind of Woman Is This')
 //topSongs.shift('What kind of Woman Is This')
 //topSongs.unshift('really', 'love me')
-//can add multiples with .push/.pop and .unshift and .shift
+//can add multiples with .unshift and .shift
