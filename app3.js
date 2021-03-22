@@ -1,6 +1,6 @@
-let loggedInUser = 'thomas123';
+let loggedInUser = null;
 
-if (loggedINUser) {
+if (loggedInUser) {
     console.log('You are logged in!');
 }
 else {
