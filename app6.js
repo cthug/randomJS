@@ -11,7 +11,10 @@
 //logical and with color choice
 //
 
-let color = 'purple';
+let color = 'red';
 if (color === 'purple' || color === 'lilac' || color === 'violet') {
     console.log('Great choice!');
+}
+else if (color === 'red' || color === 'blue' || color === 'green') {
+    console.log('basic choice');
 }
