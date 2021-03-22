@@ -9,7 +9,7 @@
 //    console.log("You must pay!");
 //}
 //logical and with color choice
-
+//
 
 let color = 'purple';
 if (color === 'purple' || color === 'lilac' || color === 'violet') {
