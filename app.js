@@ -10,7 +10,7 @@ if (rating === 3) {
 }
 
 else if (rating === 2) {
-    console.log('meets expectations');
+    console.log('this meets expectations');
 }
 
 else if (rating === 1) {
