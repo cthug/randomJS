@@ -1,5 +1,5 @@
 //final logical operator
-
+//using not
 let loggedInUser;
 //if there is not a logged in user
 
