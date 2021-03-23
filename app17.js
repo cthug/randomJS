@@ -24,36 +24,36 @@
 
 //another ex. of an array of objects
 
-const shoppingCart = [
-    {
-        product: 'Jenga Classic',
-        price: 6.88,
-        quantity: 1
-    },
-    {
-        product: 'Echo Dot',
-        price: 29.99,
-        quantity: 3
-    },
-    {
-        product: 'Fire Stick',
-        price: 39.99,
-        quantity: 2
-    }
-];
+//const shoppingCart = [
+//    {
+//        product: 'Jenga Classic',
+//        price: 6.88,
+//        quantity: 1
+//    },
+//    {
+//        product: 'Echo Dot',
+//        price: 29.99,
+//        quantity: 3
+//    },
+//    {
+//        product: 'Fire Stick',
+//        price: 39.99,
+//        quantity: 2
+//    }
+//];
 
 //another nesting example/structure in array of objects  
-const game = {
-    player1: {
-        username: 'blue',
-        playingAs: 'X'
-    },
-    player2: {
-        username: 'johnny',
-        playingAs: 'O'
-    },
-    board: [['O', null, 'X'], ['X', '0', 'X'], [null, 'O', 'X']],
-    
-};
-
+//const game = {
+//    player1: {
+//        username: 'blue',
+//        playingAs: 'X'
+//    },
+//    player2: {
+//        username: 'johnny',
+//        playingAs: 'O'
+//    },
+//    board: [['O', null, 'X'], ['X', '0', 'X'], [null, 'O', 'X']],
+//    
+//};
+//
 
