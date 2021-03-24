@@ -19,14 +19,14 @@
 
 //for ex
 
-const targetNumber = Math.floor(Math.random() * 10);
+//const targetNumber = Math.floor(Math.random() * 10);
 
-let guess = Math.floor(Math.random() * 10);
+//let guess = Math.floor(Math.random() * 10);
 
-while (guess !== targetNumber) {
+//while (guess !== targetNumber) {
     //console.log(guess);
-    guess = Math.floor(Math.random() * 10);
-}
+//    guess = Math.floor(Math.random() * 10);
+//}
 //console.log(`targetNumber: ${targetNumber} Guess: ${targetNumber}`);
 //console.log('Congrats!');
 
@@ -34,9 +34,46 @@ while (guess !== targetNumber) {
 //in the loop, update or attempt to make that condition false
 //
 
-while (true) {
-    if (targetNumber === guess) break;
-    guess = Math.floor(Math.random() * 10);
+//while (true) {
+//    if (targetNumber === guess) break;
+//    guess = Math.floor(Math.random() * 10);
+//}
+//console.log(`targetNumber: ${targetNumber} Guess: ${targetNumber}`);
+//console.log('Congrats!');
+
+//for of loop
+
+//let subreddits = ['soccer', 'popheads', 'cringe', 'books'];
+
+//for (i = 0; i < subreddits.length; i++){
+//    console.log(subreddits[i]);
+//}
+
+//for (let sub of subreddits) {
+//    console.log(sub)
+//}
+
+const magicSquare = [
+    [2, 7, 6],
+    [9, 5, 1],
+    [4, 3, 8],
+];
+
+//for (let i = 0; i < magicSquare.length; i++){
+//    let row = magicSquare[i];
+//    let sum = 0;
+//    for (let j = 0 ; j < row.length; j++){
+//        sum += row[j];
+//    }
+//    console.log(`${row} summed to ${sum}`);
+//}
+
+// for (of) version
+
+for (let row of magicSquare) {
+    let sum = 0;
+    for (let num of row) {
+        sum += num;
+    }
+    console.log(`${row} summed to ${sum}`);
 }
-console.log(`targetNumber: ${targetNumber} Guess: ${targetNumber}`);
-console.log('Congrats!');
