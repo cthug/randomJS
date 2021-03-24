@@ -30,3 +30,4 @@ for (let i = 0; i < gameBoard.length; i++) {
 //the console.log will call on the row[i] itself
 //the second console.log will call on the individual numbers one at a time
 //within the row[i]
+// this is a simple nested for loop example!
