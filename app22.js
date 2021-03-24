@@ -38,3 +38,7 @@ for (let prop in jeopardyWinnigs) {
     total += (jeopardyWinnigs[prop]);
 }
 console.log(`ken Jennings Total Earnings: ${total}`);
+
+//although fo in an be used with arrays 
+//the order is not set in stone therfore
+//it makes less sense to use for in for an array where order of index matters
