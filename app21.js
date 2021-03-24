@@ -70,10 +70,19 @@ const magicSquare = [
 
 // for (of) version
 
-for (let row of magicSquare) {
-    let sum = 0;
-    for (let num of row) {
-        sum += num;
-    }
-    console.log(`${row} summed to ${sum}`);
-}
+//for (let row of magicSquare) {
+//    let sum = 0;
+//    for (let num of row) {
+//        sum += num;
+//    }
+//    console.log(`${row} summed to ${sum}`);
+//}
+
+const words1 = ['mail', 'milk', 'bath', 'black'];
+const words2 = ['box', 'shake', 'tub', 'berry'];
+
+for (let i = 0; i < words1.length; i++){
+    console.log(`${words1[i]}${words2[i]}`);
+};
+//the above example is one where for of is less useful and more time consuming 
+ 
