@@ -27,8 +27,16 @@ while (guess !== targetNumber) {
     //console.log(guess);
     guess = Math.floor(Math.random() * 10);
 }
-console.log(`targetNumber: ${targetNumber} Guess: ${targetNumber}`);
-console.log('Congrats!');
+//console.log(`targetNumber: ${targetNumber} Guess: ${targetNumber}`);
+//console.log('Congrats!');
 
 //while(somecondition)
 //in the loop, update or attempt to make that condition false
+//
+
+while (true) {
+    if (targetNumber === guess) break;
+    guess = Math.floor(Math.random() * 10);
+}
+console.log(`targetNumber: ${targetNumber} Guess: ${targetNumber}`);
+console.log('Congrats!');
