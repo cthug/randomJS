@@ -25,6 +25,7 @@ for (let i = 0; i < gameBoard.length; i++) {
     for (let j = 0; j < row.length; j++){
         //console.log(row[j]);
         totalScore += row[j];
+        
     }
 }
 //the console.log will call on the row[i] itself
