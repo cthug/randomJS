@@ -12,15 +12,23 @@
 // isValidP// Write a isValidPassword functionassword('hello1', 'dogLuvr') //false
 
 
+//function isValidPassword(password, username) {
+//   if (password.length <= 8) {
+//        return false;
+//    }
+//    if (password.indexOf(' ') !== -1) {
+//        return false;
+//    }
+//    if (password.indexOf(username) !== -1) {
+//        return false;
+//    }
+//    return true;
+//}
+//another example
+
 function isValidPassword(password, username) {
-    if (password.length <= 8) {
-        return false;
-    }
-    if (password.indexOf(' ') !== -1) {
-        return false;
-    }
-    if (password.indexOf(username) !== -1) {
-        return false;
-    }
-    return true;
+    const tooShort = password.length <= 8;
+    const hasSpace = password.indexOf(' ') !== -1;
+    const tooSimilar = password.indexOf(username) !== -1;
+    return !tooShort && !hasSpace && !tooSimilar;
 }
