@@ -70,11 +70,21 @@
     //it will finish exection of this function
 //}
 
-function isPurple(color) {
-    if (color === 'purple') {
-        return true;
+//function isPurple(color) {
+//    if (color === 'purple') {
+//        return true;
+///    }
+//    else {
+//        return false;
+//    }
+//}
+
+//more advanced example
+function containsPurple(arr) {
+    for (let color of arr) {
+        if (color === 'purple' || color === 'magenta') {
+            return true;
+        }
     }
-    else {
-        return false;
-    }
+    return false;
 }
