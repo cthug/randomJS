@@ -41,8 +41,6 @@ function getCard() {
         '2', '3', '4', '5', '6', '7',
         '8', '9', '10', 'j', 'q', 'k', 'A'
     ];
-   const value = pick(values);
     const suits = ['clubs', 'spades', 'hearts', 'diamonds'];
-    const suit = pick(suits);
-    return { value: value, suit: suit };
+    return { value: pick(values), suit: pick(suits) };
 }
