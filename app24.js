@@ -39,11 +39,11 @@
 //format example
 
 
-function avg(arr) {
-    let total = 0;
-    arr.forEach(x => total = total + x);
-    console.log(total / arr.length);
-}
-avg([0, 50])
-avg([75, 76, 80, 95, 100])
+//function avg(arr) {
+//    let total = 0;
+//    arr.forEach(x => total = total + x);
+ //   console.log(total / arr.length);
+//}
+//avg([0, 50])
+//avg([75, 76, 80, 95, 100])
 
