@@ -45,33 +45,33 @@
 //    doSomething: multiply
 //}
 
-//functions as arguements
-function callThreeTimes(f) {
-    f();
-    f();
-    f();
-}
-function cry() {
-    console.log('boo hoo im sad!');
-}
-function rage() {
-    console.log('I am mad!');
-}
+//functions as arguments
+//callThreeTimes(f) {
+//    f();
+//    f();
+//    f();
+//
+//cry() {
+//le.log('boo hoo im sad!');
+//
+//rage() {
+//le.log('I am mad!');
+//
+//
+//repeatNTimes(action, num) {
+//let i = 0; i < num; i++)
+//ction();
+//
+//
+//Times(rage, 2);
+//otal function as argument examples
+//
+//pickOne(f1, f2) {
+//and = Math.random();
+//le.log(rand);
+//and < 0.5){
+//1();
+//e {
+//2();
 
-function repeatNTimes(action, num) {
-    for (let i = 0; i < num; i++)
-        action();
-}
-
-//repeatNTimes(rage, 2);
-//three total function as arguement examples
-
-function pickOne(f1, f2) {
-    let rand = Math.random();
-    console.log(rand);
-    if (rand < 0.5){
-        f1();
-    } else {
-        f2();
-    }
-}
+//return functions as arguments 
