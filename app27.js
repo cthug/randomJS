@@ -67,11 +67,37 @@
 //otal function as argument examples
 //
 //pickOne(f1, f2) {
-//and = Math.random();
-//le.log(rand);
+//rand = Math.random();
+//let console.log(rand);
 //and < 0.5){
 //1();
 //e {
 //2();
 
 //return functions as arguments 
+
+//function multiplyBy(num) {
+//    return function (x) {
+//        return x * num;
+//    }
+//}
+//
+//const triple = multiplyBy(3);
+//const double = multiplyBy(2);
+//const halve = multiplyBy(0.5);
+
+//next
+function makeBetweenFunc(x, y) {
+    return function (num) {
+        return num >= x && num <= y;
+    }
+}
+makeBetweenFunc(0, 18);
+
+const isKid = function (num) {
+    return num >= 0 && num <= 18;
+}
+isKid(num);
+
+
+
