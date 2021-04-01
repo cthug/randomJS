@@ -21,26 +21,37 @@
 
 //now function expressions
 
-function add(x, y) {
-    return x + y;
-}
-function multiply(x, y) {
-    return x * y;
-}
-const subtract = function (x, y) {
-    return x - y;
-}
-const divide = function (x, y) {
-    return x / y;
-}
+//function add(x, y) {
+//    return x + y;
+//}
+//function multiply(x, y) {
+//    return x * y;
+//}
+//const subtract = function (x, y) {
+//    return x - y;
+//}
+//const divide = function (x, y) {
+//    return x / y;
+//}
 
 
-const operations = [add, multiply, subtract, divide];
+//const operations = [add, multiply, subtract, divide];
 
-for (let func of operations) {
-    let result = func(30, 5);
-    console.log(result);
+//for (let func of operations) {
+//    let result = func(30, 5);
+//    console.log(result);
+//}
+//const thing = {
+//    doSomething: multiply
+//}
+
+//functions as arguements
+function callThreeTimes(f) {
+    f();
+    f();
+    f();
 }
-const thing = {
-    doSomething: multiply
+function cry() {
+    console.log('boo hoo im sad!');
 }
+
