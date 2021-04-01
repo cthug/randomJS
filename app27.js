@@ -63,4 +63,15 @@ function repeatNTimes(action, num) {
         action();
 }
 
-repeatNTimes(rage, 2);
+//repeatNTimes(rage, 2);
+//three total function as arguement examples
+
+function pickOne(f1, f2) {
+    let rand = Math.random();
+    console.log(rand);
+    if (rand < 0.5){
+        f1();
+    } else {
+        f2();
+    }
+}
