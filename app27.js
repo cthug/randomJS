@@ -54,4 +54,13 @@ function callThreeTimes(f) {
 function cry() {
     console.log('boo hoo im sad!');
 }
+function rage() {
+    console.log('I am mad!');
+}
 
+function repeatNTimes(action, num) {
+    for (let i = 0; i < num; i++)
+        action();
+}
+
+repeatNTimes(rage, 2);
