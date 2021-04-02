@@ -92,12 +92,17 @@ function makeBetweenFunc(x, y) {
         return num >= x && num <= y;
     }
 }
-makeBetweenFunc(0, 18);
+//makeBetweenFunc(0, 18);
 
-const isKid = function (num) {
-    return num >= 0 && num <= 18;
-}
-isKid(num);
+//const isKid = function (num) {
+//    return num >= 0 && num <= 18;
+//}
+//isKid(num);
 
+const isKid = makeBetweenFunc(0, 18);
+const isINnineties = makeBetweenFunc(1990, 1999);
+const isNiceWeather = makeBetweenFunc(60 - 79);
+//made a factory that returns a type of function or pattern
+//but they are all different
 
 
