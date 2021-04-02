@@ -87,11 +87,11 @@
 //const halve = multiplyBy(0.5);
 
 //next
-function makeBetweenFunc(x, y) {
-    return function (num) {
-        return num >= x && num <= y;
-    }
-}
+//function makeBetweenFunc(x, y) {
+//    return function (num) {
+//        return num >= x && num <= y;
+//    }
+//}
 //makeBetweenFunc(0, 18);
 
 //const isKid = function (num) {
@@ -99,10 +99,10 @@ function makeBetweenFunc(x, y) {
 //}
 //isKid(num);
 
-const isKid = makeBetweenFunc(0, 18);
-const isINnineties = makeBetweenFunc(1990, 1999);
-const isNiceWeather = makeBetweenFunc(60 - 79);
-//made a factory that returns a type of function or pattern
-//but they are all different
+//const isKid = makeBetweenFunc(0, 18);
+//const isINnineties = makeBetweenFunc(1990, 1999);
+//const isNiceWeather = makeBetweenFunc(60 - 79);
+////made a factory that returns a type of function or pattern
+////but they are all different
 
 
