@@ -50,16 +50,87 @@
 
  //array find
 
-let movies = [
-    "The Fantastic four",
-    "Mr. and Mrs. Smith",
-    "Mrs. Doubtfire",
-    "Mr. Deeds"
+//let movies = [
+//    "The Fantastic four",
+//    "Mr. and Mrs. Smith",
+//    "Mrs. Doubtfire",
+//    "Mr. Deeds"
+//]
+// const movie = movies.find(movie => {
+//    return movie.includes('Mrs');
+// })
+//const movie2 = movies.find(m => (
+//    m.indexOf("Mrs") === 0
+//))
+const books = [{
+    title: 'Good Omens',
+    authors:['Terry Pratchett, Neil Gaiman'],
+    rating: 4.25,
+    genres:['fiction','fantasy']
+},
+    {
+        Title: 'Changing my mind',
+        authors: ['Zadie Smith'],
+        rating: 4.25,
+        genres: ['nonfiction, essays']
+    },
+{  
+    title: 'Bone: The Complete Edition',
+    authors: ['Jeff Smith'],
+    rating: 4.42,
+    genres: ['fiction', 'graphic novel', 'fantasy']
+},
+{
+        title:'American Gods',
+        authors:['Neil Gaiman'],
+        rating: 4.11,
+        genres:['fiction','fantasy']
+},
+{
+        title:'A Gentleman In Moscow',
+        authors:['Amor Towles'],
+        rating: 4.36,
+        genres:['fiction','historical fiction']
+    },
+    {
+        title: 'The Name of the Wind',
+        authors: ['Patrick Rothfuss'],
+        rating: 4.36,
+        genres: ['fantasy','epic']
+    },
+    {
+        title: 'The Overstory',
+        authors: ['Richard Powers'],
+        rating: 4.19,
+        genres:['fiction','short stories']
+    },
+    {
+        title: 'The Way of Kings',
+        authors: ['Brandon Sanderson'],
+        rating: 3.67,
+        genres:['fiction','epic']
+    },
+    {
+        title: 'Lord of the Flies',
+        authors: ['William Golding'],
+        rating: 3.67,
+        genres: ['fiction']
+    }
 ]
- const movie = movies.find(movie => {
-    return movie.includes('Mrs');
- })
-const movie2 = movies.find(m => (
-    m.indexOf("Mrs") === 0
-))
+//const goodBook = books.find(b => b.rating >= 4.3);
+//const neilBook = books.find(b => (
+//    b.authors.includes('Neil Gaiman')
+//))
  
+//filter example
+
+//const nums = [34, 35, 67, 54, 109, 102, 32, 9];
+
+//const odds = nums.filter(n => n % 2 === 1);
+//const evens = nums.filter(n => n % 2 === 0);
+//const bigNums = nums.filter(n => n > 50);
+
+const goodBooks = books.filter(b => b.rating > 4.3)
+const fantasyBooks = books.filter(books => (
+    books.genres.includes('fantasy')
+))
