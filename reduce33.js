@@ -12,3 +12,10 @@ const product =
 //  60              6
 // 360              7
 //2520 
+
+const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
+
+const maxGrade = grades.reduce((max, currentVal) => {
+    if (currentVal > max) return currentVal;
+    return max;
+})
