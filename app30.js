@@ -62,60 +62,62 @@
 //const movie2 = movies.find(m => (
 //    m.indexOf("Mrs") === 0
 //))
-const books = [{
-    title: 'Good Omens',
-    authors:['Terry Pratchett, Neil Gaiman'],
-    rating: 4.25,
-    genres:['fiction','fantasy']
-},
-{
-        Title: 'Changing my mind',
-        authors: ['Zadie Smith'],
-        rating: 4.25,
-        genres: ['nonfiction, essays']
-},
-{  
-    title: 'Bone: The Complete Edition',
-    authors: ['Jeff Smith'],
-    rating: 4.42,
-    genres: ['fiction', 'graphic novel', 'fantasy']
-},
-{
-        title:'American Gods',
-        authors:['Neil Gaiman'],
-        rating: 4.11,
-        genres:['fiction','fantasy']
-},
-{
-        title:'A Gentleman In Moscow',
-        authors:['Amor Towles'],
-        rating: 4.36,
-        genres:['fiction','historical fiction']
-},
-{
-        title: 'The Name of the Wind',
-        authors: ['Patrick Rothfuss'],
-        rating: 4.36,
-        genres: ['fantasy','fiction']
-},
-{
-        title: 'The Overstory',
-        authors: ['Richard Powers'],
-        rating: 4.19,
-        genres:['fiction','short stories']
-},
-{
-        title: 'The Way of Kings',
-        authors: ['Brandon Sanderson'],
-        rating: 3.67,
-        genres:['fantasy','epic']
-},
-{
-        title: 'Lord of the Flies',
-        authors: ['William Golding'],
-        rating: 3.67,
-        genres: ['fiction']
-}]
+const books =
+        [
+                {
+                        title: 'Good Omens',
+                        authors: ['Terry Pratchett', 'Neil Gaiman'],
+                        rating: 4.25,
+                        genres: ['fiction', 'fantasy']
+                },
+                {
+                        title: 'Changing my mind',
+                        authors: ['Zadie Smith'],
+                        rating: 4.25,
+                        genres: ['nonfiction', 'essays']
+                },
+                {
+                        title: 'Bone: The Complete Edition',
+                        authors: ['Jeff Smith'],
+                        rating: 4.42,
+                        genres: ['fiction', 'graphic novel', 'fantasy']
+                },
+                {
+                        title: 'American Gods',
+                        authors: ['Neil Gaiman'],
+                        rating: 4.11,
+                        genres: ['fiction', 'fantasy']
+                },
+                {
+                        title: 'A Gentleman In Moscow',
+                        authors: ['Amor Towles'],
+                        rating: 4.36,
+                        genres: ['fiction', 'historical fiction']
+                },
+                {
+                        title: 'The Name of the Wind',
+                        authors: ['Patrick Rothfuss'],
+                        rating: 4.36,
+                        genres: ['fantasy', 'fiction']
+                },
+                {
+                        title: 'The Overstory',
+                        authors: ['Richard Powers'],
+                        rating: 4.19,
+                        genres: ['fiction', 'short stories']
+                },
+                {
+                        title: 'The Way of Kings',
+                        authors: ['Brandon Sanderson'],
+                        rating: 3.67,
+                        genres: ['fantasy', 'epic']
+                },
+                {
+                        title: 'Lord of the Flies',
+                        authors: ['William Golding'],
+                        rating: 3.67,
+                        genres: ['fiction']
+                }]
 //const goodBook = books.find(b => b.rating >= 4.3);
 //const neilBook = books.find(b => (
 //    b.authors.includes('Neil Gaiman')
@@ -132,13 +134,14 @@ const books = [{
 const goodBooks = books.filter(b => b.rating > 4.3)
 
 const fantasyBooks = books.filter(book => (
-    book.genres.includes('fantasy')
+    book.genres.includes('fantasy') 
 ))
 
-const shortForm = books.filter(book => (
-        books.genres.includes('short stories') 
+const shortForm = books.filter(book =>
+     (book.genres.includes('short stories') || book.genres.includes('essays'))
+)
+
+const query = 'The Way of Kings';
+const results = books.filter(book => (
+    book.title.toLowerCase().includes(query.toLowerCase())
 ))
-//const query = 'The Way of Kings';
-//const results = books.filter(books => (
-//    books.title.toLowerCase().includes(query.toLowerCase())
-//)
