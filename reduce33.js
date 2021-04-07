@@ -13,9 +13,20 @@ const product =
 // 360              7
 //2520 
 
+//const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
+//
+//const maxGrade = grades.reduce((max, currentVal) => {
+//    if (currentVal > max) return currentVal;
+//    return max;
+//})
+
+//another way
+
 const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
 
 const maxGrade = grades.reduce((max, currentVal) => {
-    if (currentVal > max) return currentVal;
-    return max;
-})
+    return Math.max(max, currentVal)
+});
+const minGrade = grades.reduce((min, currentVal) => {
+    return Math.min(min, currentVal)
+});
