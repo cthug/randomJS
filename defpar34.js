@@ -16,13 +16,16 @@
 
 //new default perameter syntax
 
-function multiply(x, y = 1) {
-    return x * y;
-}
+//function multiply(x, y = 1) {
+//    return x * y;
+//}
+//
+////or
+//
+//const greet = (person, greeting = 'hi',punctuation = '!') => {
+//    console.log(`${greeting},${person},${punctuation}`)
+//}
 
-//or
 
-const greet = (person, greeting = 'hi',punctuation = '!') => {
-    console.log(`${greeting},${person},${punctuation}`)
-}
+
 
