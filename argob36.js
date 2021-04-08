@@ -79,21 +79,53 @@
 
 //nested destructuring
 
-const results = [{
+//const results = [{
+//    first: 'Eluid',
+//    last: 'Kipchoge',
+//    country: 'Kenya',
+//    },
+//    {
+//        first: 'Feyisa',
+//        last: 'Lilesa',
+//        country:'Ethiopia'
+//    },
+//    {
+//        first: 'Galen',
+//        last: 'Rupp',
+//        country:'United States',
+//    }
+//]
+//const [{ first }, { country }] = results;
+//not always best but destructuring can be nested
+
+//destructuring parameters
+
+const runner = {
     first: 'Eluid',
     last: 'Kipchoge',
     country: 'Kenya',
-    },
-    {
-        first: 'Feyisa',
-        last: 'Lilesa',
-        country:'Ethiopia'
-    },
-    {
-        first: 'Galen',
-        last: 'Rupp',
-        country:'United States',
-    }
+    title: "elder of the Order of the Golden Heart of Kenya"
+}
+
+//function print(person) {
+//    const { first, last, title } = person;
+//}
+//console.log(`${first}${last},${title}`)
+ 
+//alternate shorter syntax for same output 
+function print({
+    first,last,title
+}) {
+    console.log(`${first} ${last}, ${title}`)
+}
+//different example
+
+const response = [
+    'HTTP/1.1',
+    '200 OK',
+    'application/json',
 ]
-const [{ first }, { country }] = results;
-//not always best but destructuring can be nested
+function parseResponse([protocol,statusCode,contentType]) {
+    console.log(`Status:${statusCode}`)
+}
+
