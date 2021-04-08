@@ -66,13 +66,34 @@
 
 //destructuring Objects
 
-const runner = {
+//const runner = {
+//    first: 'Eluid',
+//    last: 'Kipchoge',
+//    country: 'Kenya',
+//    title: "elder of the Order of the Golden Heart of Kenya"
+//}
+//const { first, last } = runner;
+//const { country: nation, title: honor } = runner;
+//rest works with this object destructure as well
+//const { first, last, ...other } = runner;
+
+//nested destructuring
+
+const results = [{
     first: 'Eluid',
     last: 'Kipchoge',
     country: 'Kenya',
-    title: "elder of the Order of the Golden Heart of Kenya"
-}
-//const { first, last } = runner;
-const { country: nation, title: honor } = runner;
-//rest works with this object destructure as well
-const { first, last, ...other } = runner;
+    },
+    {
+        first: 'Feyisa',
+        last: 'Lilesa',
+        country:'Ethiopia'
+    },
+    {
+        first: 'Galen',
+        last: 'Rupp',
+        country:'United States',
+    }
+]
+const [{ first }, { country }] = results;
+//not always best but destructuring can be nested
