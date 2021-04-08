@@ -2,13 +2,21 @@
 
 //spread in a function call 
 
-function giveMeFour(a,b,c,d) {
-    console.log('a',a)
-    console.log('b',b)
-    console.log('c',c)
-    console.log('d',d)
-}
+//function giveMeFour(a,b,c,d) {
+//    console.log('a',a)
+//    console.log('b',b)
+//    console.log('c',c)
+//    console.log('d',d)
+//}
+//
+//const colors = ['red', 'orange', 'yellow', 'green']
+//
+//giveMeFour(...colors);
 
-const colors = ['red', 'orange', 'yellow', 'green']
+//spread in array literal
 
-giveMeFour(...colors);
+const guns = ['pistol', 'shotgun', 'rifle'];
+const gunCompanies = ['smith&wesson', 'remmington', 'glock']
+const gunCal = ['.45', '12gauge', '.220']
+
+const gunDetails = [...gunCompanies, ...guns, ...gunCal]
