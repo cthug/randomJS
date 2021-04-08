@@ -23,22 +23,22 @@
 
 //spread in object literals
 
-const feline = {
-    legs: 4,
-    family: 'felidae'
-};
-const canine = {
-    family: 'canine',
-    furry: true
-};
-const dog = {
-    ...canine,
-    isPet: true,
-    adorable: true
-};
-const houseCat = {
-    ...feline,
-    isGrumpy: true,
-    personality: 'unpredictable'
-};
+//const feline = {
+//    legs: 4,
+//    family: 'felidae'
+//};
+//const canine = {
+//    family: 'canine',
+//    furry: true
+//};
+//const dog = {
+//    ...canine,
+//    isPet: true,
+//    adorable: true
+//};
+//const houseCat = {
+//    ...feline,
+//    isGrumpy: true,
+//    personality: 'unpredictable'
+//};
 
