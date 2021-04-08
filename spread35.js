@@ -15,8 +15,30 @@
 
 //spread in array literal
 
-const guns = ['pistol', 'shotgun', 'rifle'];
-const gunCompanies = ['smith&wesson', 'remmington', 'glock']
-const gunCal = ['.45', '12gauge', '.220']
+//const guns = ['pistol', 'shotgun', 'rifle'];
+//const gunCompanies = ['smith&wesson', 'remmington', 'glock']
+//const gunCal = ['.45', '12gauge', '.220']
+//
+//const gunDetails = [...gunCompanies, ...guns, ...gunCal]
 
-const gunDetails = [...gunCompanies, ...guns, ...gunCal]
+//spread in object literals
+
+const feline = {
+    legs: 4,
+    family: 'felidae'
+};
+const canine = {
+    family: 'canine',
+    furry: true
+};
+const dog = {
+    ...canine,
+    isPet: true,
+    adorable: true
+};
+const houseCat = {
+    ...feline,
+    isGrumpy: true,
+    personality: 'unpredictable'
+};
+
