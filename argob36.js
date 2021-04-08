@@ -16,24 +16,50 @@
 //rest parameters
 
 
-function sum(...nums) {
-    return nums.reduce((total, currVal) => {
-        return total + currVal
-    })
-}
+//function sum(...nums) {
+//    return nums.reduce((total, currVal) => {
+//        return total + currVal
+//    })
+//}
+//
+////collects remaining args.
+//const first = ('Tom');
+//const last = ('Cruise');
+//const titles = ('actor', 'stuntman');
+//
+//function fullName(first, last,...titles) {
+//    console.log('first',first)
+//    console.log('last',  last)
+//    console.log('titles',titles)
+//}
+////the order matters ...rest parameter has to be last
+//
+//const multiply = (...nums) => (
+//    nums.reduce((total, currVal) =>total * currVal) 
+//)
 
-//collects remaining args.
-const first = ('Tom');
-const last = ('Cruise');
-const titles = ('actor', 'stuntman');
+//destructuring
+//nice way to unpack values from arrays
+//and properties from objects into distinct variables
 
-function fullName(first, last,...titles) {
-    console.log('first',first)
-    console.log('last',  last)
-    console.log('titles',titles)
-}
-//the order matters ...rest parameter has to be last
+//marathon results from mens 2016 olympics
+const raceResults = [
+    'Eliud Kipchoge',
+    'Feyisa Lelis',
+    'Galen Rupp',
+    'Ghirmay Ghebreslassie',
+    'Alphonce Simbu',
+    'Jared Ward'
+];
+//older syntax
+//const gold = raceResults[0]
+//const silver = raceResults[1]
+//const bronze = raceResults[2]
 
-const multiply = (...nums) => (
-    nums.reduce((total, currVal) =>total * currVal) 
-)
+//shorter syntax
+const [gold, silver, bronze] = raceResults;
+// this is a basic example of destructuring
+const [first, , , fourth] = raceResults;
+//i can add comas to continue down the array list and get the desired information
+const [winner, ...others] = raceResults;
+//i can use rest to create an array of the remaining elements
