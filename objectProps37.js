@@ -102,11 +102,24 @@ const team = {
 //this example shows a nice way to create an object that works as a container for 
 //two methods
 
-const math = {
-    add: function (x, y) {
-        return x + y;
+//const math = {
+//    add: function (x, y) {
+//        return x + y;
+//    },
+//    multiply: function (x, y) {
+//        return x * y;
+//    }
+//}
+
+//Method shorthand syntax
+//aimple shorter & newer way to write a method
+
+const auth = {
+    username: 'tommyBot',
+    login() {
+        console.log('Logged you in!')
     },
-    multiply: function (x, y) {
-        return x * y;
+    logout() {
+        console.log('Logged you out!')
     }
 }
