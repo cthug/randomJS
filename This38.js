@@ -48,6 +48,29 @@ function sayHI() {
 
 //you could even add a method for ex
 
+//const person = {
+//    first: 'joey',
+//    last: 'donuts',
+//    nickName: 'Joey bag of donuts',
+//    fullName() {
+//        const {
+//            first,
+//            last,
+//            nickName
+//        } = this;
+//        return `${first} ${last} AKA ${nickName}`
+//    },
+//    printBio() { 
+//        const fullName = this.fullName();
+//        console.log(`${fullName} is a person!`)
+//    }
+//}
+//so you could call person.printBio() and it will display the bio in addition
+
+//THIS: invoction context
+//the value will change with this depending on how you execute the function
+//for example
+
 const person = {
     first: 'joey',
     last: 'donuts',
@@ -65,4 +88,13 @@ const person = {
         console.log(`${fullName} is a person!`)
     }
 }
-//so you could call person.printBio() and it will display the bio in addition
+
+const printBio = person.printBio()
+
+//this will return as an error
+//because it is now referencing the window
+//if there is something to the left and then a . then a function 
+//this will be set to the thing to the left
+//if there is nothing to the left 
+//then this will be set to the global execution window
+//so this depends entirely on the invocation context
