@@ -102,28 +102,116 @@ function sayHI() {
 //here is a small demo showing sometimes arrow functions are great
 //because they dont get their own this.
 
-const annoyer = {
-    phrases: [
-        "literally",
-        "cray cray",
-        "I Can't even",
-        "Totes!",
-        "YOLO",
-        "Can't stop,wont stop"
-    ],
-    pickphrase() {
-        const { phrases }
-            = this;
-        const idx = Math.floor(Math.random() * phrases.length);
-        return phrases[idx]
+//const annoyer = {
+//    phrases: [
+//        "literally",
+//        "cray cray",
+//        "I Can't even",
+//        "Totes!",
+//        "YOLO",
+//        "Can't stop,wont stop"
+//    ],
+//    pickphrase() {
+//        const { phrases }
+//            = this;
+//        const idx = Math.floor(Math.random() * phrases.length);
+//        return phrases[idx]
+//    },
+//    start() {
+//        this.timerId = setInterval(() => {
+//            console.log(this.pickphrase())
+//        }, 3000)
+//    },
+//    stop() {
+//    clearInterval(this.timerId);
+//    console.log('wow glad its over')
+//    }
+//}
+
+//first example below is an example without using this which limits you to one deck
+const mainDeck = makeDeck();
+
+function makeDeck() {
+    const deck = [];
+    const values = '2,3,4,5,6,7,8,9,10,J,Q,K,A';
+    const suits = ['clubs', 'diamonds', 'spades', 'hearts'];
+    for (let val of values.split(',')) {
+        for (let suit of suits) {
+            deck.push ({
+                val,
+                suit
+            })
+        }
+    }
+    return deck;
+}
+function drawCard(deck) {
+    return deck.pop()
+}
+//const myDeck = makeDeck();
+//const card1 = drawCard(myDeck);
+
+//here below i didnt have to pass an arguement around like the above example 
+// instead i grouped the method with the values using 'this'
+const myDeck = {
+    deck: [],
+    drawnCards: [],
+    suits: ['clubs', 'diamonds', 'spades', 'hearts'],
+    values: '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+    intitilizeDeck() {
+        const {
+            suits,
+            values,
+            deck
+        } = this;
+        for (let val of values.split(',')) {
+            for (let suit of suits) {
+                deck.push({
+                    val,
+                    suit
+                })
+            }
+        }
+        //return deck;
     },
-    start() {
-        this.timerId = setInterval(() => {
-            console.log(this.pickphrase())
-        }, 3000)
+    drawCard() {
+        const card = this.deck.pop();
+        this.drawnCards.push(card);
+        return card;
     },
-    stop() {
-    clearInterval(this.timerId);
-    console.log('wow glad its over')
+    drawMultiple(numCards) {
+        const cards = []
+        for (let i = 0; i < numCards; i++){
+            cards.push(this.drawCard());
+        }
+        return cards;
+    },
+    shuffle() {
+        const { deck } = this;
+        for (let i = deck.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [deck[i], deck[j]] = [deck[j], [deck[i]]];
+        }
     }
 }
+
+//adding simple shuffle implementation
+
+//function shuffle(arr) {
+//    //loop over arr backwards
+//    for (let i = arr.length - 1; i > 0; i--){
+//        //pickrandom element before current element
+//        let j = Math.floor(Math.random() * (i + 1));
+//        //swap
+//        [arr[i], arr[j]] = [arr[j], [arr[i]]];
+//        console.log(arr);
+//    }
+//}
+
+myDeck.intitilizeDeck();
+myDeck.shuffle();
+const h1 = myDeck.drawMultiple(2);
+const h2 = myDeck.drawMultiple(2);
+const h3 = myDeck.drawMultiple(2);
+
+//using objects is a great way of grouping values with functionality
