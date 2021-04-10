@@ -71,25 +71,25 @@ function sayHI() {
 //the value will change with this depending on how you execute the function
 //for example
 
-const person = {
-    first: 'joey',
-    last: 'donuts',
-    nickName: 'Joey bag of donuts',
-    fullName() {
-        const {
-            first,
-            last,
-            nickName
-        } = this;
-        return `${first} ${last} AKA ${nickName}`
-    },
-    printBio() { 
-        const fullName = this.fullName();
-        console.log(`${fullName} is a person!`)
-    }
-}
+//const person = {
+//    first: 'joey',
+//    last: 'donuts',
+//    nickName: 'Joey bag of donuts',
+//    fullName() {
+//        const {
+//            first,
+//            last,
+//            nickName
+//        } = this;
+//        return `${first} ${last} AKA ${nickName}`
+//    },
+//    printBio() { 
+//        const fullName = this.fullName();
+//        console.log(`${fullName} is a person!`)
+//    }
+//}
 
-const printBio = person.printBio()
+//const printBio = person.printBio()
 
 //this will return as an error
 //because it is now referencing the window
@@ -98,3 +98,32 @@ const printBio = person.printBio()
 //if there is nothing to the left 
 //then this will be set to the global execution window
 //so this depends entirely on the invocation context
+
+//here is a small demo showing sometimes arrow functions are great
+//because they dont get their own this.
+
+const annoyer = {
+    phrases: [
+        "literally",
+        "cray cray",
+        "I Can't even",
+        "Totes!",
+        "YOLO",
+        "Can't stop,wont stop"
+    ],
+    pickphrase() {
+        const { phrases }
+            = this;
+        const idx = Math.floor(Math.random() * phrases.length);
+        return phrases[idx]
+    },
+    start() {
+        this.timerId = setInterval(() => {
+            console.log(this.pickphrase())
+        }, 3000)
+    },
+    stop() {
+    clearInterval(this.timerId);
+    console.log('wow glad its over')
+    }
+}
