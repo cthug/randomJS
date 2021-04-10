@@ -114,12 +114,12 @@ const team = {
 //Method shorthand syntax
 //aimple shorter & newer way to write a method
 
-const auth = {
-    username: 'tommyBot',
-    login() {
-        console.log('Logged you in!')
-    },
-    logout() {
-        console.log('Logged you out!')
-    }
-}
+//const auth = {
+//    username: 'tommyBot',
+//    login() {
+//        console.log('Logged you in!')
+//    },
+//    logout() {
+//        console.log('Logged you out!')
+//    }
+//}
