@@ -93,7 +93,20 @@ const team = {
 //}
 
 //or this way to shorten syntax
-const addProp = (obj, key, val) => {
-    return {...obj,key:val}
+//const addProp = (obj, key, val) => {
+//    return {...obj,key:val}
+//}
+//const result = addProp(team, 'Happy!', ':)')
+
+//adding methods to objects
+//this example shows a nice way to create an object that works as a container for 
+//two methods
+
+const math = {
+    add: function (x, y) {
+        return x + y;
+    },
+    multiply: function (x, y) {
+        return x * y;
+    }
 }
-const result = addProp(team, 'Happy!', ':)')
