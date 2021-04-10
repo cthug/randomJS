@@ -32,6 +32,22 @@ function sayHI() {
 //}
 
 //or we could write this way using destructuring
+//const person = {
+//    first: 'joey',
+//    last: 'donuts',
+//    nickName: 'Joey bag of donuts',
+//    fullName() {
+//        const {
+//            first,
+//            last,
+//            nickName
+//        } = this;
+//        console.log(`${first} ${last} AKA ${nickName}`)
+//    }
+//}
+
+//you could even add a method for ex
+
 const person = {
     first: 'joey',
     last: 'donuts',
@@ -42,7 +58,11 @@ const person = {
             last,
             nickName
         } = this;
-        console.log(`${first} ${last} AKA ${nickName}`)
+        return `${first} ${last} AKA ${nickName}`
+    },
+    printBio() { 
+        const fullName = this.fullName();
+        console.log(`${fullName} is a person!`)
     }
 }
-
+//so you could call person.printBio() and it will display the bio in addition
